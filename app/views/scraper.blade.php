@@ -6,14 +6,14 @@
             
             <div class="row">
               <div class="col-md-12">
-                <h1>Superb Web Scraper Demo by iAPDesign.com</h1>
+                <h1>Superb Web Scraper Demo using Laravel 4  by Developers.ph</h1>
                 <p>Web Scraping Contents</p>
               </div>
             </div>
             
             <div class="row">
                 <div class="col-sm-12"> 
-
+                @if($contents)
 					@foreach ($contents as $content)
 	                    <!-- Begin Listing: 609 W GRAVERS LN-->
 	                    <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
@@ -39,7 +39,9 @@
 	                        </div>
 	                    </div><!-- End Listing-->
 	        		@endforeach
-
+	        	@else 
+	        	<div class="well text-center"> No Result Found!</div>
+	        	@endif
                 </div>
         </div><!-- End container -->
     </div>
